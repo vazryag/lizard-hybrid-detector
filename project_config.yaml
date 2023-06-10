@@ -1,0 +1,23 @@
+classifier:
+  C: 0.10284379327993369
+  dual: false
+  penalty: l2
+  random_state: 42
+data:
+  image_datasets_collection: ../data/processed/augmented_image_dataset.npz
+  test_images_set: test_images
+  test_target_column: test_targets
+  train_images_set: train_images
+  train_target_column: train_targets
+extractor:
+  file_path: ../models/mobilenetv3_small.h5
+  include_top: false
+  input_shape: (224, 224, 3)
+  ranked_features: (573, 431, 69, 519, 7, 368, 11, 255, 179, 262, 364, 193, 425, 73,
+    286, 131, 154, 260, 189, 206)
+  weights: imagenet
+pipeline_metadata:
+  accuracy: 0.9377192982456141
+  bento_model_name: lizards_clf
+  f1_score: 0.9306118020434634
+  pipe_path: ../models/lizards_clf.pkl

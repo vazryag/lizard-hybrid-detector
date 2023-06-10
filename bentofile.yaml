@@ -1,0 +1,17 @@
+service: "service:svc"  # Same as the argument passed to `bentoml serve`
+labels:
+    owner: arthur_g
+    stage: dev
+include:
+- "*.py"
+- "project_config.yaml"
+- "/models/mobilenetv3_small.h5"
+- "/scripts/__init__.py"
+- "/scripts/utils.py"
+exclude:
+- ".gitignore"
+- "/data/"
+- "/results/"
+- "/venv/"
+python:
+    requirements_txt: "./requirements.txt"
